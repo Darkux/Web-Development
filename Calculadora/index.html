@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculadora</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="calculadora">
+
+        <!-- Pantalla -->
+        <div >
+           <input class="board" type="text" id="textbox" value="0" readonly>
+        </div>
+
+        <!-- Botones -->
+        <div class="botones">
+
+            <button onclick="clear_()" class="limpiar">C</button>
+            <button onclick="delete_()"class="delete">⌫</button>
+            <button>%</button>
+            <button onclick="WriteOperation(this)" class="operador">÷</button>
+
+            <button onclick="WriteNumber(this)">7</button>
+            <button onclick="WriteNumber(this)">8</button>
+            <button onclick="WriteNumber(this)">9</button>
+            <button onclick="WriteOperation(this)" class="operador">*</button>
+
+            <button onclick="WriteNumber(this)">4</button>
+            <button onclick="WriteNumber(this)">5</button>
+            <button onclick="WriteNumber(this)">6</button>
+            <button onclick="WriteOperation(this)" class="operador">-</button>
+
+            <button onclick="WriteNumber(this)">1</button>
+            <button onclick="WriteNumber(this)">2</button>
+            <button onclick="WriteNumber(this)">3</button>
+            <button onclick="WriteOperation(this)" class="operador">+</button>
+
+            <button onclick="WriteNumber(this)" class="cero">0</button>
+            <button>.</button>
+            <button onclick="resolve()" class="igual">=</button>
+
+        </div>
+
+    </div>
+     <script src="script.js"></script>
+</body>
+
+</html>
+

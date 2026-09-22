@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eeeeee;
+    color: #222222;
+}
+
+main {
+    width: 800px;
+    max-width: 90%;
+    margin: 50px auto;
+}
+
+section {
+    background: white;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+.presentacion {
+    text-align: center;
+}
+
+.presentacion img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+.presentacion h2 {
+    margin-top: 5px;
+    color: #555555;
+}
+
+.habilidades ul {
+    padding-left: 20px;
+}
+
+.proyectos article {
+    border-left: 4px solid #333333;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+.links a {
+    text-decoration: none;
+    color: #0066cc;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
