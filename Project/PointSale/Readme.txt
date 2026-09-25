@@ -75,26 +75,6 @@ The backend will be responsible for:
 
 The project was expanded to include backend files in addition to the existing HTML, CSS, and JavaScript files.
 
-The current structure is:
-
-```text
-Project
-│
-├── login.html
-├── login.css
-│
-├── dashboard.html
-├── dashboard.css
-├── dashboard.js
-│
-├── notebook.html
-├── notebook.css
-├── notebook.js
-│
-└── backend
-    ├── connection.php
-    └── login.php
-```
 
 ### Result
 
