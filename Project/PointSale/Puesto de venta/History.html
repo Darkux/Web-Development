@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Notebook - Restaurante</title>
+
+<link rel="stylesheet" href="style/History.css">
+
+</head>
+
+<body>
+
+<div class="notebook">
+
+    <!-- =================================================
+         SCROLL
+    ================================================== -->
+
+<section class="history">
+
+    <div class="history-header">
+        <div>
+            <h2>Historial de ventas</h2>
+            <p>Consulta las ventas realizadas por fecha o ID.</p>
+        </div>
+    </div>
+
+    <div class="history-filtros">
+
+        <div class="filtro">
+            <label for="fecha">Fecha</label>
+            <input type="date" id="fecha">
+        </div>
+
+        <div class="filtro">
+            <label for="buscarVenta">ID de venta</label>
+            <input 
+                type="search" 
+                id="buscarVenta" 
+                placeholder="Buscar ID..."
+            >
+        </div>
+
+        <button id="btnLimpiarFiltros" class="btn-limpiar">
+            Limpiar filtros
+        </button>
+
+    </div>
+
+    <div class="history-tabla-contenedor">
+
+        <table class="history-tabla">
+
+            <thead>
+                <tr>
+                    <th>ID Venta</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Mesa</th>
+                    <th>Usuario</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+
+            <tbody id="historialVentas">
+
+                <tr>
+                    <td colspan="6" class="historial-vacio">
+                        No hay ventas para mostrar.
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+</div>
+<script src="script/History.js"></script>
+</body>
+
+</html>
+
+

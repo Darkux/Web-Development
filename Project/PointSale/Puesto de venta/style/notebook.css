@@ -1,0 +1,403 @@
+/* =====================================================
+   CONTENIDO PRINCIPAL
+===================================================== */
+
+.contenido {
+    flex: 1;
+    min-width: 0;
+
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #d9e1e8;
+}
+
+
+/* =====================================================
+   ENCABEZADO
+===================================================== */
+
+.titulo {
+    flex-shrink: 0;
+
+    width: 100%;
+    height: 50px;
+
+    background: #555;
+    border-bottom: 2px solid #444;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #111;
+
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   SCROLL DE CUENTAS
+===================================================== */
+
+.cuentas-scroll {
+    flex: 1;
+    min-height: 0;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    padding: 35px;
+}
+
+
+/* =====================================================
+   CONTENEDOR DE CUENTAS
+===================================================== */
+
+.cuentas {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(240px, 1fr));
+
+    gap: 35px;
+}
+
+
+/* =====================================================
+   SCROLLBAR CUENTAS
+===================================================== */
+
+.cuentas-scroll::-webkit-scrollbar {
+    width: 9px;
+}
+
+.cuentas-scroll::-webkit-scrollbar-track {
+    background: #c3ccd3;
+}
+
+.cuentas-scroll::-webkit-scrollbar-thumb {
+    background: #777;
+    border-radius: 5px;
+}
+
+.cuentas-scroll::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/* =====================================================
+   NOTA
+===================================================== */
+
+.nota {
+    position: relative;
+
+    min-height: 245px;
+
+    padding: 30px 20px 18px;
+
+    background: #fffdf5;
+
+    border: 2px solid #222;
+
+    box-shadow:
+        5px 6px 0 rgba(0, 0, 0, .12);
+
+    transform: rotate(-.5deg);
+
+    transition:
+        transform .2s,
+        box-shadow .2s;
+}
+
+.nota:hover {
+    transform:
+        translateY(-4px)
+        rotate(0deg);
+
+    box-shadow:
+        7px 10px 0 rgba(0, 0, 0, .16);
+}
+
+
+/* =====================================================
+   COLORES DE LAS NOTAS
+===================================================== */
+
+.nota:nth-child(2) {
+    background: #fff5d2;
+    transform: rotate(.7deg);
+}
+
+.nota:nth-child(3) {
+    background: #fffdf5;
+    transform: rotate(-.3deg);
+}
+
+.nota:nth-child(4) {
+    background: #fff8dc;
+    transform: rotate(.5deg);
+}
+
+.nota:nth-child(5) {
+    background: #fffdf5;
+    transform: rotate(-.7deg);
+}
+
+.nota:nth-child(6) {
+    background: #fff4cf;
+    transform: rotate(.4deg);
+}
+
+
+/* =====================================================
+   ANILLOS
+===================================================== */
+
+.anillos {
+    position: absolute;
+
+    top: -17px;
+    left: 20px;
+    right: 20px;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.anillo {
+    width: 25px;
+    height: 25px;
+
+    border: 3px solid #111;
+    border-radius: 50%;
+
+    background: transparent;
+
+    position: relative;
+}
+
+.anillo::after {
+    content: "";
+
+    position: absolute;
+
+    width: 8px;
+    height: 8px;
+
+    border: 2px solid #111;
+    border-radius: 50%;
+
+    background: white;
+
+    left: 5px;
+    top: 9px;
+}
+
+
+/* =====================================================
+   CABECERA NOTA
+===================================================== */
+
+.nota-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+
+    border-bottom:
+        2px solid rgba(0,0,0,.15);
+}
+
+.identificador {
+    font-size: 20px;
+    font-weight: bold;
+    color: #222;
+}
+
+.tipo {
+    font-size: 11px;
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    color: #777;
+}
+
+
+/* =====================================================
+   PRODUCTOS
+===================================================== */
+
+.productos {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-bottom: 18px;
+}
+
+.producto {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 23px;
+
+    border-bottom:
+        1px dashed rgba(0,0,0,.18);
+
+    padding-bottom: 4px;
+}
+
+.producto-nombre {
+    font-size: 14px;
+    color: #222;
+
+    max-width: 70%;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.producto-precio {
+    font-size: 13px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+/* =====================================================
+   ESTADO
+===================================================== */
+
+.estado {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    margin: 5px 0 18px;
+}
+
+.estado-linea {
+    width: 25px;
+    height: 3px;
+
+    background: #bdbdbd;
+}
+
+.estado-circulo {
+    width: 15px;
+    height: 15px;
+
+    border-radius: 50%;
+
+    background: #eee;
+    border: 2px solid #999;
+}
+
+.estado-circulo.completo {
+    background: #555;
+    border-color: #333;
+}
+
+.estado-circulo.actual {
+    background: #f2c94c;
+    border-color: #9a7a00;
+}
+
+
+/* =====================================================
+   TOTAL
+===================================================== */
+
+.total {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 8px;
+
+    border-top: 2px solid #222;
+}
+
+.total-texto {
+    font-size: 13px;
+    font-weight: bold;
+
+    text-transform: uppercase;
+}
+
+.total-precio {
+    font-size: 21px;
+    font-weight: bold;
+
+    color: #111;
+}
+
+
+/* =====================================================
+   ID
+===================================================== */
+
+.pedido-id {
+    position: absolute;
+
+    bottom: 5px;
+    left: 8px;
+
+    font-size: 9px;
+    color: #777;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1150px) {
+
+    .cuentas {
+        grid-template-columns:
+            repeat(2, minmax(240px, 1fr));
+    }
+
+}
+
+@media (max-width: 750px) {
+
+    .sidebar {
+        width: 165px;
+        min-width: 165px;
+    }
+
+    .cuentas {
+        grid-template-columns: 1fr;
+    }
+
+    .cuentas-scroll {
+        padding: 25px;
+    }
+
+    .titulo {
+        font-size: 24px;
+    }
+
+}
